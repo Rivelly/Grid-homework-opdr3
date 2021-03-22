@@ -1,1 +1,83 @@
 /*Maak hier jouw CSS!*/
+body {
+    background-color: lightgoldenrodyellow;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 174px 100px auto 50px;
+    grid-template-areas:
+    "A C C"
+    "B C C"
+    "B E D"
+    "B E leeg"
+    "F F F";
+    gap: 16px;
+}
+header { /*A*/
+height: 50px;
+justify-content: center;
+align-items: center;
+display: flex;
+grid-area: A;
+background-color: darkred;
+}
+
+article { /* B*/
+display: flex;
+color: white;
+grid-area: B;
+background-color: darkred;
+}
+
+.C {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: C;
+    background-color: darkred;
+}
+
+.D {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: D;
+    /*height: 50px;*/
+    background-color: darkred;
+
+}
+
+.E {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: E;
+    /*height: 100px;*/
+    background-color: darkred;
+}
+
+Footer  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: F;
+    /*height: 100px;*/
+    background-color: darkred;
+
+}
+/* hier komt voor mobiel*/
+@media screen and (max-width: 576px) {
+    body{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+           "A"
+    "B"
+    "C"
+    "D"
+    "E"
+    "grid-cap"
+    "F";
+        grid-template-rows: auto;
+        gap: 16px;
+    }
+}
